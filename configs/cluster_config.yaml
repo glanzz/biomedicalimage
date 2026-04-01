@@ -1,0 +1,18 @@
+cluster:
+  name: "northeastern_explorer"
+  partition: "gpu"  # or "gpu-debug" for testing
+  gpu_type: "a100"  # or "v100" depending on availability
+  nodes: 1
+  gpus_per_node: 4
+  cpus_per_gpu: 8
+  memory_per_gpu: "40G"  # A100 has 40GB or 80GB variants
+  max_time: "48:00:00"
+
+storage:
+  scratch_dir: "/scratch/<your_username>/parallelml"
+  project_dir: "/home/<your_username>/parallelml_final"
+
+modules:
+  - "anaconda3/2023.03"
+  - "cuda/11.8"
+  - "gcc/10.2.0"

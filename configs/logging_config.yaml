@@ -1,0 +1,12 @@
+wandb:
+  project: "biomedical-image-captioning"
+  entity: "team18-neu"  # Your WandB username or team
+  log_interval: 100  # Log every N steps
+
+tensorboard:
+  log_dir: "outputs/logs/tensorboard"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  save_dir: "outputs/logs"
