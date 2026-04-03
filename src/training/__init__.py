@@ -8,5 +8,12 @@ Training modules
 
 from .single_gpu_trainer import SingleGPUTrainer
 from .ddp_trainer import DDPTrainer, setup_distributed, cleanup_distributed
+from .fsdp_trainer import FSDPTrainer
 
-__all__ = ['SingleGPUTrainer', 'DDPTrainer', 'setup_distributed', 'cleanup_distributed']
+__all__ = [
+    'SingleGPUTrainer',
+    'DDPTrainer',
+    'FSDPTrainer',
+    'setup_distributed',
+    'cleanup_distributed'
+]
