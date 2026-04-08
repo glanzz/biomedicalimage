@@ -26,8 +26,21 @@ class ImagePreprocessor:
         self.mean = np.array(normalize_mean)
         self.std = np.array(normalize_std)
 
-    def preprocess_single_image(self, image: Image.Image) -> np.ndarray:
-        """Preprocess a single image"""
+    def preprocess_single_image(self, image) -> np.ndarray:
+        """
+        Preprocess a single image
+
+        Args:
+            image: Either a PIL Image object or a file path (str)
+
+        Returns:
+            Preprocessed image as numpy array
+        """
+        # Handle both PIL Image objects and file paths
+        if isinstance(image, str):
+            # Load image from path
+            image = Image.open(image)
+
         # Convert to RGB if necessary
         if image.mode != 'RGB':
             image = image.convert('RGB')
