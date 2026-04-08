@@ -17,7 +17,7 @@ from src.data.preprocessing import ParallelImagePreprocessor
 
 
 def preprocess_dataset(
-    dataset_path="data/raw/pmc_oa_dataset",
+    dataset_path="data/raw/pmc_oa",
     output_dir="data/processed",
     n_workers=32,
     partition_size=100,
@@ -177,7 +177,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--dataset_path',
         type=str,
-        default='data/raw/pmc_oa_dataset',
+        default='data/raw/pmc_oa',
         help='Path to input dataset (default: full dataset)'
     )
     parser.add_argument(
